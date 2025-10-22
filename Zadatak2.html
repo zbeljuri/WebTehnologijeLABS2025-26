@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="bs">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tutorijal 1, Zadatak 3</title>
+  </head>
+  <body>
+    <form action="#" method="GET">
+      <table>
+        <tr>
+          <td><label for="ime">Ime:</label></td>
+          <td><input type="text" id="ime" value="Student" /></td>
+          <td><label for="grad">Grad:</label></td>
+          <td><input type="text" id="grad" value="Sarajevo" /></td>
+        </tr>
+
+        <tr>
+          <td><label for="prezime">Prezime:</label></td>
+          <td><input type="text" id="prezime" value="Studenkovic" /></td>
+          <td><label for="indeks">Broj indeksa:</label></td>
+          <td><input type="text" id="indeks" value="12345" /></td>
+        </tr>
+
+        <tr>
+          <td>Spol:</td>
+          <td>
+            <input type="radio" id="muski" name="spol" value="m" checked />
+            <label for="muski">muški</label>
+            <input type="radio" id="zenski" name="spol" value="z" />
+            <label for="zenski">ženski</label>
+          </td>
+          <td></td>
+          <td>
+            <input type="checkbox" id="samofin" checked />
+            <label for="samofin">Samofinansirajući</label>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Odsjek:</td>
+          <td colspan="3">
+            <input type="radio" id="ae" name="odsjek" value="ae" />
+            <label for="ae">AE</label>
+            <input type="radio" id="ee" name="odsjek" value="ee" />
+            <label for="ee">EE</label>
+            <input type="radio" id="ri" name="odsjek" value="ri" />
+            <label for="ri">RI</label>
+            <input type="radio" id="tk" name="odsjek" value="tk" checked />
+            <label for="tk">TK</label>
+          </td>
+        </tr>
+
+        <tr>
+          <td><input type="submit" value="Potvrdi" /></td>
+          <td></td>
+          <td></td>
+          <td>
+            <input type="reset" value="Poništi" />
+          </td>
+        </tr>
+      </table>
+    </form>
+
+    <p>
+      Dugme Potvrdi šalje formu negdje (bilo gdje), a dugme Poništi je resetuje.
+    </p>
+  </body>
+</html>
