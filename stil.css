@@ -1,6 +1,7 @@
 table {
   border-collapse: collapse;
   font-family: sans-serif;
+  margin-bottom: 20px;
 }
 
 th, td {
@@ -10,10 +11,15 @@ th, td {
 }
 
 th {
-  background-color: #CCCCCC; /* siva */
+  background-color: #CCCCCC;
   font-weight: bold;
 }
 
 td {
-  background-color: #FFF2CC; /* žućkasta */
+  background-color: #FFF2CC;
+}
+
+/* svaki PARAN red ima bijelu pozadinu */
+tr:nth-child(even) td {
+  background-color: white;
 }
