@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zadatak 3</title>
+  </head>
+  <body>
+    <form id="forma">
+      <table>
+        <tr>
+          <td><label for="radijus">Radijus:</label></td>
+          <td><input type="text" id="radijus" name="radijus" required /></td>
+        </tr>
+        <tr>
+          <td><label for="volumen">Volumen:</label></td>
+          <td>
+            <input
+              type="text"
+              id="volumen"
+              name="volumen"
+              readonly
+              value="0.0000"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <input
+              type="button"
+              value="Izračunaj"
+              onclick="izracunajVolumen()"
+            />
+          </td>
+        </tr>
+      </table>
+    </form>
+
+    <script>
+      function izracunajVolumen() {
+        const r = parseFloat(document.getElementById("radijus").value);
+
+        const volumen = (4 / 3) * Math.PI * Math.pow(r, 3);
+        document.getElementById("volumen").value = volumen.toFixed(4);
+      }
+    </script>
+  </body>
+</html>
