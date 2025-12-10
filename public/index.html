@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tab Stranice</title>
+
+    <style>
+      .tabs a {
+        margin-right: 15px;
+        cursor: pointer;
+        color: blue;
+        text-decoration: underline;
+      }
+
+      #content {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid black;
+        width: 600px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tabs">
+      <a onclick="ucitaj('stranica1.html')">Stranica 1</a>
+      <a onclick="ucitaj('stranica2.html')">Stranica 2</a>
+      <a onclick="ucitaj('stranica3.html')">Stranica 3</a>
+    </div>
+
+    <div id="content">Kliknite na neku stranicu iznad...</div>
+
+    <script>
+      function ucitaj(file) {
+        fetch(file)
+          .then((res) => res.text())
+          .then((html) => {
+            document.getElementById("content").innerHTML = html;
+          });
+      }
+    </script>
+  </body>
+</html>
